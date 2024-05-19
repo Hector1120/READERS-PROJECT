@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Libros</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/list.css' %}">
+</head>
+<body>
+    <h1>Lista de Libros</h1>
+    <a href="{% url 'book_create' %}" class="button">Crear Nuevo Libro</a>
+    <ul>
+        {% for book in books %}
+            <li>
+                {{ book.title }} por {{ book.author }} ({{ book.published_year }})
+                <a href="{% url 'book_update' book.pk %}">Editar</a>
+                <a href="{% url 'book_delete' book.pk %}">Eliminar</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

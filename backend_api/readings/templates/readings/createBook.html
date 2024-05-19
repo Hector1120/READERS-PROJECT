@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% if form.instance.pk %}Actualizar Libro{% else %}Crear Libro{% endif %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/create.css' %}">
+</head>
+<body>
+    <h1>{% if form.instance.pk %}Actualizar Libro{% else %}Crear Nuevo Libro{% endif %}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">{% if form.instance.pk %}Actualizar{% else %}Guardar{% endif %}</button>
+    </form>
+    <a href="{% url 'book_list' %}">Volver a la lista de libros</a>
+</body>
+</html>
