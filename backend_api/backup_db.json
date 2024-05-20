@@ -1,1 +1,16 @@
-[]
+[
+    {
+        "id": 5,
+        "title": "El Principito",
+        "author": "Antoine de Saint-Exup\u00e9ry",
+        "genre": "Literatura",
+        "published_year": 1943,
+        "isbn": "1234",
+        "publisher": "Antonie",
+        "pages": 70,
+        "language": "Espa\u00f1ol",
+        "description": "El principito es una novela corta y la obra m\u00e1s famosa del escritor y aviador franc\u00e9s Antoine de Saint-Exup\u00e9ry.\u200b",
+        "cover_image_url": "https://www.google.com.co/books/edition/El_Principito/1N0KDgAAQBAJ?hl=es&gbpv=1&printsec=frontcover",
+        "status": true
+    }
+]
